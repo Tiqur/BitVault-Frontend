@@ -1,0 +1,65 @@
+
+body {
+    background-color: #25333D;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    margin-top: 50%;
+}
+
+
+input {
+    background-color: #25333D;
+    border: 1px solid #697279;
+    color: #838f97;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 25px;
+    transition: 300ms;
+} input:focus {
+    border-color: #2D92DB;
+    outline: none;
+} input:hover {
+    border-color: #2D92DB;
+}
+
+
+button {
+    background-color: #2D92DB;
+    border-radius: 8px;
+    color: #D4D4D4;
+    font-size: 20px;
+    padding: 25px;
+    border: none;
+    margin-top: 10px;
+    transition: 300ms;
+    cursor: pointer;
+} button:hover {
+    background-color: #2079b8;
+} button:focus {
+    outline: 1px solid white;
+}
+
+
+.divider {
+    background-color: #697279;
+    margin-bottom: 20%;
+    height: 1px;
+}
+
+.checkbox {
+    color: #697279;
+
+}
