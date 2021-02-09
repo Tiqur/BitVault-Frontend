@@ -1,4 +1,5 @@
 import styles from './styles.module.css'
+import AuthInputBox from "../../components/AuthInputBox"
 
 
 function LoginPage() {
@@ -6,9 +7,9 @@ function LoginPage() {
       <div className={styles.container}>
           <div className={styles.wrap}>
             <div className={styles.divider}></div>
-            <input type="text" name="uname" placeholder="Username or Email" required></input>
-            <input type="password" name="password" placeholder="Password" required></input>
-
+            <AuthInputBox type="text" name="uname" placeholder="Username or Email"/>
+            <AuthInputBox type="password" name="password" placeholder="Password"/>
+            
             <label className={styles.checkbox}>
               <input type="checkbox"></input> Remember me?
             </label>
