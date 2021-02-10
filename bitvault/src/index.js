@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import RegisterLoginPage from './pages/RegisterLoginPage'
 import './index.css'
 
 
 ReactDOM.render(
-    <RegisterLoginPage />,
+  <App />,
   document.getElementById('root')
 );

@@ -62,20 +62,37 @@ const DividerLine = styled.div`
 `
 
 
-const RegisterLoginPage = () => {
-    return (
-        <>
-        <GlobalStyle />
-        <Container>
-            <DividerLine></DividerLine>
-            <AuthInputBox type="text" name="uname" placeholder="Username"/>
-            <AuthInputBox type="text" name="email" placeholder="Email"/>
-            <AuthInputBox type="password" name="password1" placeholder="Password"/>
-            <AuthInputBox type="password" name="password2" placeholder="Confirm password"/>      
-            <Button>Register</Button>      
-        </Container>
-        </>
-    )
+const RegisterLoginPage = (props) => {
+    const type = props.type;
+    let comp;
+
+    switch(type) {
+        case "register":
+               comp = <>
+                <GlobalStyle />
+                <Container>
+                    <DividerLine></DividerLine>
+                    <AuthInputBox type="text" name="uname" placeholder="Username"/>
+                    <AuthInputBox type="text" name="email" placeholder="Email"/>
+                    <AuthInputBox type="password" name="password1" placeholder="Password"/>
+                    <AuthInputBox type="password" name="password2" placeholder="Confirm password"/>      
+                    <Button>Register</Button>      
+                </Container>
+                </>
+            break;
+        case "login":
+               comp = <>
+                <GlobalStyle />
+                <Container>
+                    <DividerLine></DividerLine>
+                    <AuthInputBox type="text" name="uname" placeholder="Username or Email"/>
+                    <AuthInputBox type="password" name="password" placeholder="Password"/>
+                    <Button>Login</Button>      
+                </Container>
+                </>
+            break;
+    }
+    return comp;
 }
 
 
