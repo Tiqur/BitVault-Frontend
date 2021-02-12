@@ -1,4 +1,4 @@
-function AuthInputBox(props) {
+const AuthInputBox = (props) => {
     return <input type={props.type} name={props.name} placeholder={props.placeholder} required></input>;
 }
 

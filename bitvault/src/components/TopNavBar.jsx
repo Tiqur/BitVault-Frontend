@@ -1,4 +1,4 @@
-function TopNavBar(props) {
+const TopNavBar = (props) => {
     return <p>TopNavBar</p>
 }
 

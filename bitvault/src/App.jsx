@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom"; 
-import RegisterLoginPage from './pages/RegisterLoginPage'
+import RegisterLoginPage from './pages/RegisterLoginPage';
+import DashboardPage from './pages/DashboardPage';
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route exact path="/register">
           <RegisterLoginPage type="register"/>
+        </Route>
+        <Route exact path="/dashboard">
+          <DashboardPage />
         </Route>
       </Switch>
     </BrowserRouter>
