@@ -36,6 +36,7 @@ const SideElement = styled.li`
 const ElementLink = styled(Link)`
     display: block;
     text-align: center;
+    font-family: 'Roboto';
     color: #7F9DA9;
     text-decoration: none;
 `
@@ -56,6 +57,7 @@ const SideBar = (props) => {
     return (
         <PageContainer>
             <SideDiv>
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
                 <NavLink to="#home">Dashboard</NavLink>
                 <NavLink to="#home">Passwords</NavLink>
                 <NavLink to="#home">Settings</NavLink>
