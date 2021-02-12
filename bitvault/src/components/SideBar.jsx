@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 
@@ -30,7 +30,11 @@ const ElementLink = styled(Link)`
 
 
 const NavLink = (props) => {
-    return <SideElement><ElementLink to={props.to}>{props.children}</ElementLink></SideElement>;
+    return (
+        <SideElement>
+            <ElementLink to={props.to}>{props.children}</ElementLink>
+        </SideElement>
+    );
 }
 
 
