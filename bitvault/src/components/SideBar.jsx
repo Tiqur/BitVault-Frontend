@@ -6,9 +6,21 @@ const SideDiv = styled.ul`
     margin: 0;
     list-style-type: none;
     background-color: #37474F;
-    width: 16%;
+    width: 70%;
     height: 100vh;
 `
+
+const PageContainer = styled.div`
+    display: flex;
+`
+
+const BlurDiv = styled.div`
+    background-color: black;
+    opacity: .5;
+    height: auto;
+    width: 30%;
+`
+
 
 const SideElement = styled.li`
     padding: 18px 0 18px 0;
@@ -42,13 +54,16 @@ const NavLink = (props) => {
 
 const SideBar = (props) => {
     return (
-        <SideDiv>
-            <NavLink to="#home">Dashboard</NavLink>
-            <NavLink to="#home">Passwords</NavLink>
-            <NavLink to="#home">Settings</NavLink>
-            <NavLink to="#home">Profile</NavLink>
-            <NavLink to="#home">Notes</NavLink>
-        </SideDiv>
+        <PageContainer>
+            <SideDiv>
+                <NavLink to="#home">Dashboard</NavLink>
+                <NavLink to="#home">Passwords</NavLink>
+                <NavLink to="#home">Settings</NavLink>
+                <NavLink to="#home">Profile</NavLink>
+                <NavLink to="#home">Notes</NavLink>
+            </SideDiv>
+            <BlurDiv />
+        </PageContainer>
     )
 }
 
