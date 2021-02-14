@@ -2,3 +2,9 @@
     margin: 0;
     padding: 0;
 }
+
+.react-icons {
+    color: #C2CDCF;
+    padding-left: 30px;
+    position: absolute;
+}

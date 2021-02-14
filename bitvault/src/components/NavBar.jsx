@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 
 const NavDiv = styled.div`
+    position: absolute;
+    width: 100%;
     display: flex;
     background-color: blue;
     height: 60px;
@@ -35,9 +37,20 @@ const SearchBox = styled.input`
 
 `
 
+const Title = styled(Link)`
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 130%;
+    color: white;
+`
+
+
+
 const NavBar = (props) => {
     return (
         <NavDiv>
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
+            <Title>BitVault</Title>
             {/* Only for Desktop */}
             {/* <SearchDiv>
                 <SearchBox />
