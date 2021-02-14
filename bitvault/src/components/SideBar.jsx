@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { MdDashboard, MdLock, MdSettings, MdAccountCircle, MdNote } from 'react-icons/md';
-import Hamburger from 'hamburger-react'
 import '../index.css'
 
 
@@ -69,13 +68,10 @@ const SideElement = (props) => {
 }
 
 
-
-
 const SideBar = () => {
     return (
-        <PageContainer>
+        <PageContainer className="SideBarContainer">
             <SideDiv>
-                <Hamburger></Hamburger>
                 <NavLink to="#home" primary>BitVault</NavLink>
                 <SideElement destination="#dashboard" icon={MdDashboard}>Dashboard</SideElement>
                 <SideElement destination="#passwords" icon={MdLock}>Passwords</SideElement>
