@@ -4,7 +4,32 @@
 }
 
 .react-icons {
-    color: #C2CDCF;
+    color: #c2cdcf;
     padding-left: 30px;
     position: absolute;
+}
+
+.primary-exit {
+    padding-left: 200px;
+    color: #94aeb3;
+}
+
+.primary-exit:hover {
+    color: #c2cdcf;
+    cursor: pointer;
+}
+
+.hamburger-react {
+    position: absolute;
+    color: #C2CDCF; 
+    z-index:99999;
+}
+
+@media only screen and (min-width: 992px) {
+    .hamburger-react {
+        display: none;
+    }
+    .primary-exit {
+        display: none;
+    }
 }

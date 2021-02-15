@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
+import { MdMenu } from 'react-icons/md';
 
 
 const NavDiv = styled.div`
     position: absolute;
     width: 100%;
     display: flex;
-    background-color: blue;
+    background-color: #2E47CB;
     height: 60px;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(-1px 1px 1px #000000);
+        
+    @media (min-width: 992px) {
+        left: 250px;
+    }
 `
 
 
@@ -42,14 +47,20 @@ const Title = styled(Link)`
     font-family: 'Roboto';
     font-size: 130%;
     color: white;
+
+    @media (min-width: 992px) {
+        display: none;
+    }
 `
 
+const openNav = () => {
+    document.getElementsByClassName("SideBarContainer")[0].style.display = "flex";
+}
 
-
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <NavDiv>
-            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
+            <MdMenu onClick={openNav} />
             <Title>BitVault</Title>
             {/* Only for Desktop */}
             {/* <SearchDiv>

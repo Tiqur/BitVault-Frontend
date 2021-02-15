@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { MdDashboard, MdLock, MdSettings, MdAccountCircle, MdNote } from 'react-icons/md';
+import { MdDashboard, MdLock, MdSettings, MdAccountCircle, MdNote, MdClose } from 'react-icons/md';
 import '../index.css'
 
 
@@ -8,7 +8,7 @@ const SideDiv = styled.ul`
     margin: 0;
     list-style-type: none;
     background-color: #37474F;
-    width: 70%;
+    min-width: 250px;
     height: 100vh;
 `
 
@@ -16,13 +16,26 @@ const PageContainer = styled.div`
     position: absolute;
     display: flex;
     width: 100%;
+
+    @media (max-width: 992px) {
+        display: none;
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+    }
 `
 
 const BlurDiv = styled.div`
     background-color: black;
     opacity: .5;
     height: auto;
-    width: 30%;
+    width: 100%;
+
+    // remove blur
+    @media (min-width: 992px) {
+        display: none;
+    }
 `
 
 const NavLink = styled(Link)`
@@ -31,15 +44,6 @@ const NavLink = styled(Link)`
     color: #7F9DA9;
     text-decoration: none;
     padding-left: 70px;
-
-    ${props => props.primary && css`
-        background-color: #32414b;
-        text-align: center;
-        color: #6a838c;
-        font-size: x-large;
-        padding: 28px 0 28px 0;
-        font-weight: bold;
-    `}
 `
 
 
@@ -57,8 +61,33 @@ const SideElementDiv = styled.div`
     }
 `
 
+const PrimaryTitleDiv = styled.div`
+    background-color: #32414b;
+    color: #6a838c;
+    font-size: x-large;
+    padding: 16px 0 16px 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-bottom: 2px solid #3f515a;
+`
+
+
+const exitSideBar = () => {
+    document.getElementsByClassName("SideBarContainer")[0].style.display = "none";
+}
+
 
 const SideElement = (props) => {
+    if (props.primary) {
+        return (
+            <PrimaryTitleDiv>
+                <NavLink primary>BitVault</NavLink>
+                <MdClose size={35} onClick={exitSideBar} className="react-icons primary-exit"/>
+            </PrimaryTitleDiv>
+        )
+    }
     return (
         <SideElementDiv>
             <props.icon size={25} className="react-icons"/>
@@ -72,7 +101,7 @@ const SideBar = () => {
     return (
         <PageContainer className="SideBarContainer">
             <SideDiv>
-                <NavLink to="#home" primary>BitVault</NavLink>
+                <SideElement primary />
                 <SideElement destination="#dashboard" icon={MdDashboard}>Dashboard</SideElement>
                 <SideElement destination="#passwords" icon={MdLock}>Passwords</SideElement>
                 <SideElement destination="#settings" icon={MdSettings}>Settings</SideElement>
