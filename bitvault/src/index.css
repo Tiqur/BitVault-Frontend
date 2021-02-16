@@ -19,16 +19,7 @@
     cursor: pointer;
 }
 
-.hamburger-react {
-    position: absolute;
-    color: #C2CDCF; 
-    z-index:99999;
-}
-
 @media only screen and (min-width: 992px) {
-    .hamburger-react {
-        display: none;
-    }
     .primary-exit {
         display: none;
     }

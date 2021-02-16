@@ -4,7 +4,6 @@ import { MdMenu } from 'react-icons/md';
 
 
 const NavDiv = styled.div`
-    position: absolute;
     width: 100%;
     display: flex;
     background-color: #2E47CB;
@@ -12,10 +11,6 @@ const NavDiv = styled.div`
     justify-content: center;
     align-items: center;
     filter: drop-shadow(-1px 1px 1px #000000);
-        
-    @media (min-width: 992px) {
-        left: 250px;
-    }
 `
 
 
