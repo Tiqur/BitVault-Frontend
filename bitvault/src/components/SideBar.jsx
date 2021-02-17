@@ -20,6 +20,9 @@ const PageContainer = styled.div`
     @media (max-width: 992px) {
         display: none;
     }
+    @media (min-width: 993px) {
+        display: flex !important;
+    }
 `
 
 const BlurDiv = styled.div`
