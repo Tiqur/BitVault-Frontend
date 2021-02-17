@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { MdMenu } from 'react-icons/md';
+import FlexDiv from '../components/FlexDiv';
 
 
-const NavDiv = styled.div`
+const NavDiv = styled(FlexDiv)`
     width: 100%;
-    display: flex;
     background-color: #2E47CB;
     min-height: 60px;
     justify-content: center;
@@ -14,8 +14,7 @@ const NavDiv = styled.div`
 `
 
 
-const SearchDiv = styled.div`
-    display: flex;
+const SearchDiv = styled(FlexDiv)`
     background-color: #677EF8;
     width: 40%;
     height: 40px;

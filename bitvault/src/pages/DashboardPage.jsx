@@ -1,16 +1,14 @@
 import SideBar from '../components/SideBar';
 import NavBar from '../components/NavBar';
+import FlexDiv from '../components/FlexDiv';
 import styled from 'styled-components';
 
-
-const Container = styled.div`
-    display: flex;
+const Container = styled(FlexDiv)`
     flex-direction: row;
     justify-content: flex-start;
 `
 
-const ContentDiv = styled.div`
-    display: flex;
+const ContentDiv = styled(FlexDiv)`
     justify-content: space-between;
     margin-left: 250px;
     width: 100%;
@@ -22,9 +20,9 @@ const ContentDiv = styled.div`
     }
 `
 
-const Content = styled.div`
-    display: flex;
+const Content = styled(FlexDiv)`
     justify-content: center;
+    align-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     height: 100%;
@@ -37,15 +35,30 @@ const PasswordDiv = styled.div`
     margin: 60px 20px;
     background-color: white;
     filter: drop-shadow(0px 4px 4px #554c4c);
-
 `
 
-const DashboardPage = (props) => {
+
+
+const DashboardPage = () => {
     return (
         <Container>
             <ContentDiv>
-                <NavBar style=""/>
-                <Content >
+                <NavBar />
+                <Content>
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
+                    <PasswordDiv />
                     <PasswordDiv />
                     <PasswordDiv />
                     <PasswordDiv />

@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import FlexDiv from '../components/FlexDiv';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -7,9 +8,8 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
-const Container = styled.div`
+const Container = styled(FlexDiv)`
     height: 100vh;
-    display: flex;
     flex-direction: column;
     padding: 0 10%;
     margin-top: 50%;

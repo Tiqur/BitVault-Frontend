@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+import FlexDiv from '../components/FlexDiv';
 import { MdDashboard, MdLock, MdSettings, MdAccountCircle, MdNote, MdClose } from 'react-icons/md';
 import '../index.css'
 
@@ -12,9 +13,8 @@ const SideDiv = styled.ul`
     height: 100vh;
 `
 
-const PageContainer = styled.div`
+const PageContainer = styled(FlexDiv)`
     position: absolute;
-    display: flex;
     width: 100%;
 
     @media (max-width: 992px) {
@@ -46,8 +46,7 @@ const NavLink = styled(Link)`
 `
 
 
-const SideElementDiv = styled.div`
-    display: flex;
+const SideElementDiv = styled(FlexDiv)`
     padding: 18px 0 18px 0;
     justify-content: space-around;
     flex-direction: column;
@@ -60,13 +59,12 @@ const SideElementDiv = styled.div`
     }
 `
 
-const PrimaryTitleDiv = styled.div`
+const PrimaryTitleDiv = styled(FlexDiv)`
     background-color: #32414b;
     color: #6a838c;
     font-size: x-large;
     padding: 16px 0 16px 0;
     font-weight: bold;
-    display: flex;
     justify-content: space-around;
     flex-direction: column;
     border-bottom: 2px solid #3f515a;
