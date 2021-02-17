@@ -20,7 +20,7 @@ const PageContainer = styled.div`
     @media (max-width: 992px) {
         display: none;
     }
-    @media (min-width: 993px) {
+    @media (min-width: 992px) {
         display: flex !important;
     }
 `

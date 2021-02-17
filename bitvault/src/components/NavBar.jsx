@@ -7,7 +7,7 @@ const NavDiv = styled.div`
     width: 100%;
     display: flex;
     background-color: #2E47CB;
-    height: 60px;
+    min-height: 60px;
     justify-content: center;
     align-items: center;
     filter: drop-shadow(-1px 1px 1px #000000);
