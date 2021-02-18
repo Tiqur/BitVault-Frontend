@@ -32,9 +32,15 @@ const Content = styled(FlexDiv)`
 const PasswordDiv = styled.div`
     min-width: 350px;
     height: 200px;
-    margin: 60px 20px;
+    margin: 20px 20px;
     background-color: white;
     filter: drop-shadow(0px 4px 4px #554c4c);
+
+    @media (max-width: 992px) {
+        width: 90%;
+        height: 60px;
+        margin: 20px 0 0 0;
+    }
 `
 
 
