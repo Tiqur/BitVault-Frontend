@@ -6,6 +6,7 @@ import '../index.css'
 
 
 const SideDiv = styled.ul`
+    position: fixed;
     margin: 0;
     list-style-type: none;
     background-color: #37474F;
@@ -26,9 +27,10 @@ const PageContainer = styled(FlexDiv)`
 `
 
 const BlurDiv = styled.div`
+    position: fixed;
     background-color: black;
     opacity: .5;
-    height: auto;
+    height: 100vh;
     width: 100%;
 
     // remove blur
@@ -97,6 +99,7 @@ const SideElement = (props) => {
 const SideBar = () => {
     return (
         <PageContainer className="SideBarContainer">
+            <BlurDiv />
             <SideDiv>
                 <SideElement primary />
                 <SideElement destination="#dashboard" icon={MdDashboard}>Dashboard</SideElement>
@@ -105,7 +108,6 @@ const SideBar = () => {
                 <SideElement destination="#profile" icon={MdAccountCircle}>Profile</SideElement>
                 <SideElement destination="#notes" icon={MdNote}>Notes</SideElement>
             </SideDiv>
-            <BlurDiv />
         </PageContainer>
     )
 }

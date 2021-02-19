@@ -5,6 +5,7 @@ import FlexDiv from '../components/FlexDiv';
 
 
 const NavDiv = styled(FlexDiv)`
+    position: fixed;
     width: 100%;
     background-color: #2E47CB;
     min-height: 60px;

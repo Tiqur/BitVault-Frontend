@@ -19,12 +19,6 @@
     cursor: pointer;
 }
 
-.sticky {
-    position: relative;
-    background-color: blue;
-}
-
-
 @media only screen and (min-width: 992px) {
     .primary-exit {
         display: none;

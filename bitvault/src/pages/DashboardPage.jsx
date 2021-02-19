@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import FlexDiv from '../components/FlexDiv';
 import styled from 'styled-components';
 
+
 const Container = styled(FlexDiv)`
     flex-direction: row;
     justify-content: flex-start;
@@ -21,6 +22,7 @@ const ContentDiv = styled(FlexDiv)`
 `
 
 const Content = styled(FlexDiv)`
+    padding-top: 100px;
     justify-content: center;
     align-content: flex-start;
     flex-direction: row;
@@ -49,7 +51,6 @@ const DashboardPage = () => {
     return (
         <Container>
             <ContentDiv>
-                <NavBar />
                 <Content>
                     <PasswordDiv />
                     <PasswordDiv />
@@ -69,10 +70,8 @@ const DashboardPage = () => {
                     <PasswordDiv />
                     <PasswordDiv />
                     <PasswordDiv />
-
-
-
                 </Content>
+                <NavBar />
             </ContentDiv>
             <SideBar />
         </ Container>
