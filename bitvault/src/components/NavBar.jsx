@@ -10,6 +10,10 @@ const NavDiv = styled(FlexDiv)`
     min-height: 60px;
     align-items: center;
     filter: drop-shadow(-1px 1px 1px #000000);
+
+    @media (max-width: 991px) {
+        justify-content: center;
+    }
 `
 
 
@@ -19,7 +23,7 @@ const SearchDiv = styled(FlexDiv)`
     height: 40px;
     align-items: center;
     justify-content: center;
-    margin-left: 150px;
+    margin-left: 120px;
 
     @media (max-width: 991px) {
         display: none;
@@ -51,12 +55,17 @@ const Title = styled(Link)`
         display: none;
     }
 `
+
 const TextLink = styled(Link)`
     font-size: ${props => props.large ? 'medium' : 'small'};
     color: #dce1fa;
     text-decoration: none;
     font-family: 'Roboto';
     text-overflow: ellipsis;
+
+    @media (max-width: 991px) {
+        display: none;
+    }
 `
 
 const LoggedInContainer = styled(FlexDiv)`
