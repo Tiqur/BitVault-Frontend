@@ -82,7 +82,7 @@ const SideElement = (props) => {
     if (props.primary) {
         return (
             <PrimaryTitleDiv>
-                <NavLink primary>BitVault</NavLink>
+                <NavLink>BitVault</NavLink>
                 <MdClose size={35} onClick={exitSideBar} className="react-icons primary-exit"/>
             </PrimaryTitleDiv>
         )
