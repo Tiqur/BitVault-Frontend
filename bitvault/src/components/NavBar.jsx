@@ -9,6 +9,7 @@ const NavDiv = styled(FlexDiv)`
     background-color: #2E47CB;
     min-height: 60px;
     align-items: center;
+    justify-content: center;
     filter: drop-shadow(-1px 1px 1px #000000);
 
     @media (max-width: 991px) {
@@ -18,13 +19,13 @@ const NavDiv = styled(FlexDiv)`
 
 
 const SearchDiv = styled(FlexDiv)`
+    position: absolute;
     background-color: #677EF8;
     width: 40%;
     height: 40px;
     align-items: center;
     justify-content: center;
-    margin-left: 120px;
-
+    margin-right: 250px;
     @media (max-width: 991px) {
         display: none;
     }
@@ -37,7 +38,6 @@ const SearchBox = styled.input`
     width: 83%;
     height: 40px;
     color: #c0cafa;
-
 
     &:focus {
         outline: none;
