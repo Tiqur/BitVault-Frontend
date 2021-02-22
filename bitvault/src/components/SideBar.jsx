@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import FlexDiv from '../components/FlexDiv';
+import BlurPage from '../components/BlurPage';
 import { MdDashboard, MdLock, MdSettings, MdAccountCircle, MdNote, MdClose } from 'react-icons/md';
 import '../index.css'
 
@@ -23,19 +24,6 @@ const PageContainer = styled(FlexDiv)`
     }
     @media (min-width: 992px) {
         display: flex !important;
-    }
-`
-
-const BlurDiv = styled.div`
-    position: fixed;
-    background-color: black;
-    opacity: .5;
-    height: 100vh;
-    width: 100%;
-
-    // remove blur
-    @media (min-width: 992px) {
-        display: none;
     }
 `
 
@@ -99,7 +87,7 @@ const SideElement = (props) => {
 const SideBar = () => {
     return (
         <PageContainer className="SideBarContainer">
-            <BlurDiv />
+            <BlurPage className="primary-exit" />
             <SideDiv>
                 <SideElement primary />
                 <SideElement destination="#dashboard" icon={MdDashboard}>Dashboard</SideElement>
