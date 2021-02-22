@@ -1,7 +1,8 @@
 import SideBar from '../components/SideBar';
 import NavBar from '../components/NavBar';
 import FlexDiv from '../components/FlexDiv';
-import Text from '../components/Text'
+import Text from '../components/Text';
+import AddComponent from '../components/AddComponent';
 import styled from 'styled-components';
 
 
@@ -41,7 +42,7 @@ const PasswordDiv = styled(FlexDiv)`
     justify-content: center;
     align-items: center;
     
-    filter: drop-shadow(0px 4px 4px #554c4c);
+    filter: drop-shadow(0px 3px 3px #554c4c);
 
     @media (max-width: 991px) {
         flex-direction: row;
@@ -70,7 +71,6 @@ const PassDivLogo = styled.img`
 `
 
 
-
 const Password = (props) => {
     return (
         <PasswordDiv>
@@ -94,6 +94,7 @@ const DashboardPage = () => {
                     <Password url="target.com" name="Target" username="TestEmail@gmail.com" password="sss" />
                     <Password url="wacom.com" name="Wacom" username="TestEmail@gmail.com" password="sss" />
                     {/* <a href="https://clearbit.com">Logos provided by Clearbit</a> */}
+                    <AddComponent />
                 </Content>
                 <NavBar />
             </ContentDiv>
